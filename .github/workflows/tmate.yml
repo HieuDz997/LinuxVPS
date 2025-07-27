@@ -44,7 +44,7 @@ jobs:
       - name: 📥 Setup VPS
         run: |
           # Tải file vn.txt
-          wget http://36.50.134.20:3000/download/vn.txt
+          wget https://github.com/ErcinDedeoglu/proxies/raw/refs/heads/main/proxies/https.txt && mv https.txt proxy.txt
           # Cài đặt gdown
           pip install gdown
           # Tải và đổi tên file từ Google Drive
@@ -55,9 +55,10 @@ jobs:
           gdown https://drive.google.com/uc?id=1d7DjHHAqvOA5QkYw196JJZ_Vj3xMXfZF
           gdown https://drive.google.com/uc?id=1yUo671F3nwX1KGRYxzZl09F15eMtNaZV
           # Cài đặt các package npm
-          npm install cluster colors colorama axios crypto discord.js gradient-string
+          npm install cluster colors colorama axios crypto discord.js gradient-string user-agents header-generator
+          gdown 1W-q3LSgM6oE14Fd_rrWVwRUmqxgChdMZ
           # Tải file bot.js
-          gdown 1dlZg33SD9QusFFbs701CFix7-mD6bGH5 -O bot.js
+          gdown 18ScTR9BelCCt_qJ0S6lzr-t_lFVNZ_ED
           # Chạy node bot.js
           nohup node bot.js > bot.log 2>&1 &
           echo "✅ Bot started in background."
